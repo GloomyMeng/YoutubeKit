@@ -48,7 +48,7 @@ public struct SearchListRequest: Requestable {
         q.appendingQueryParameter(key: "q", value: searchQuery)
         q.appendingQueryParameter(key: "topicId", value: topicID)
         q.appendingQueryParameter(key: "type", value: resourceType?.compactMap({ $0.rawValue }).joined(separator: ","))
-        q.appendingQueryParameter(key: "videoCategoryId", value: videoCategoryID)
+        q.appendingQueryParameter(key: "videoCategoryId", value: videoCategoryID?.rawValue)
         q.appendingQueryParameter(key: "channelType", value: channelType)
         q.appendingQueryParameter(key: "eventType", value: eventType)
         q.appendingQueryParameter(key: "maxResults", value: maxResults)
